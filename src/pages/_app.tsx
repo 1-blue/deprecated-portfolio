@@ -5,7 +5,7 @@ import Head from "next/head";
 import "../styles/globals.css";
 
 // component
-import ScrollProgress from "@src/components/ScrollProgress";
+import ScrollProgress from "@src/components/common/ScrollProgress";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
