@@ -10,19 +10,9 @@ import { setDetailsHeight } from "@src/libs/utils";
 import Button from "@src/components/common/Button";
 import Icon from "@src/components/common/Icon";
 
-type Props = {
-  skills: {
-    "HTML/CSS": string;
-    JavaScript: string;
-    TypeScript: string;
-    "React.js": string;
-    "Next.js": string;
-    "Node.js": string;
-    Mysql: string;
-    "Git/GitHub": string;
-    Trello: string;
-  };
-};
+// type
+import { DataType } from "@src/types";
+type Props = Pick<DataType, "skills">;
 
 const Skills = ({ skills }: Props) => {
   // 2022/06/15 - details wrapper의 ref - by 1-blue

@@ -3,13 +3,12 @@ import Icon from "@src/components/common/Icon";
 import Content from "@src/components/common/Content";
 import CustomLink from "@src/components/common/CustomLink";
 
-type Props = {
-  title: string;
-  contents: string[];
-  updatedAt: Date;
-  email: string;
-  phone: string;
-};
+// type
+import { DataType } from "@src/types";
+type Props = Pick<
+  DataType,
+  "title" | "contents" | "updatedAt" | "email" | "phone"
+>;
 
 const Cover = ({ title, contents, updatedAt, email, phone }: Props) => {
   return (

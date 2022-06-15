@@ -6,29 +6,9 @@ import matter from "gray-matter";
 import Cover from "@src/components/Cover";
 import Skills from "@src/components/Skills";
 
-type Props = {
-  title: string;
-  contents: string[];
-  updatedAt: Date;
-  email: string;
-  phone: string;
-  skills: {
-    "HTML/CSS": string;
-    JavaScript: string;
-    TypeScript: string;
-    "React.js": string;
-    "Next.js": string;
-    "Node.js": string;
-    Mysql: string;
-    "Git/GitHub": string;
-    Trello: string;
-  };
-  projects: {
-    Blelog: string;
-    Blemarket: string;
-    Blegram: string;
-  };
-};
+// type
+import { DataType } from "@src/types";
+type Props = DataType;
 
 const Home: NextPage<Props> = ({
   title,
