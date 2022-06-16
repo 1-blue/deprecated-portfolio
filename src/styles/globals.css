@@ -5,9 +5,10 @@
 @layer base {
   html {
     font-family: 'Jua', sans-serif;
+    background-color: #FAFAFA;
   }
   body::-webkit-scrollbar {
-    display: none
+    display: none;
   }
 
   /* details에 transition을 넣기 위함 */
@@ -18,5 +19,49 @@
   }
   details[open] {
     height: var(--expanded);
+  }
+
+  /* react-slick dots 수정 */
+  .custom-dots {
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+  .custom-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .custom-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+  }
+  .custom-dots li button:before {
+    font-size: 2.7rem;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    color: gray;
+  }
+  .custom-dots li.slick-active button:before {
+    color: #ffffff;
   }
 }
