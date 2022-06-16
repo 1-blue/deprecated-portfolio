@@ -15,9 +15,23 @@ export type DataType = {
     "Git/GitHub": string;
     Trello: string;
   };
-  projects: {
-    Blelog: string;
-    Blemarket: string;
-    Blegram: string;
+  projects: ProjectType[];
+};
+
+export type ProjectType = {
+  name: string;
+  skills: string[];
+  description: string;
+  thumbnails: string[];
+  links: {
+    deploy: string;
+    github: string;
+    trello: string;
+    velog: string;
   };
+  date: {
+    start: Date;
+    end: Date;
+  };
+  logoColor: string;
 };
