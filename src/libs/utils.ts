@@ -29,3 +29,16 @@ export const setDetailsHeight = (wrapper: HTMLElement) => {
   const details = wrapper.querySelectorAll("details");
   details.forEach((detail) => RO.observe(detail));
 };
+
+// 2022/06/17 - 스로틀 헬퍼 함수 - by 1-blue
+export const throttleHelper = (callback: () => void, waitTime: number) => {
+  let timerId: ReturnType<typeof setTimeout> | null = null;
+
+  return () => {
+    if (timerId) return;
+    timerId = setTimeout(() => {
+      callback();
+      timerId = null;
+    }, waitTime);
+  };
+};
