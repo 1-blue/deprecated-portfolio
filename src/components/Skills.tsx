@@ -68,7 +68,11 @@ const Skills = ({ skills }: Props) => {
       </article>
 
       {isShowButton && (
-        <Button type="button" onClick={onToggleSkills}>
+        <Button
+          type="button"
+          onClick={onToggleSkills}
+          className="right-28 bottom-8"
+        >
           <Icon shape="list" className="w-8 h-8 text-white" />
         </Button>
       )}

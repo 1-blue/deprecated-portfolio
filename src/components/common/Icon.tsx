@@ -12,7 +12,8 @@ type Props = {
     | "email"
     | "phone"
     | "list"
-    | "logo";
+    | "logo"
+    | "double-up";
   fill?: boolean;
   className?: string;
 };
@@ -44,6 +45,14 @@ const Icon = ({ shape, fill, className }: Props) => {
             d="M4 6h16M4 10h16M4 14h16M4 18h16"
           />
         );
+      case "double-up":
+        return (
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M5 11l7-7 7 7M5 19l7-7 7 7"
+          />
+        );
 
       default:
         break;
@@ -69,6 +78,14 @@ const Icon = ({ shape, fill, className }: Props) => {
           <path
             fillRule="evenodd"
             d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clipRule="evenodd"
+          />
+        );
+      case "double-up":
+        return (
+          <path
+            fillRule="evenodd"
+            d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
             clipRule="evenodd"
           />
         );

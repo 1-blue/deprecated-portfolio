@@ -6,8 +6,15 @@ import "../styles/globals.css";
 
 // component
 import ScrollProgress from "@src/components/common/ScrollProgress";
+import Button from "@src/components/common/Button";
+import Icon from "@src/components/common/Icon";
+
+// hook
+import useScrollUpDown from "@src/hooks/useScrollUpDown";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { pageY } = useScrollUpDown();
+
   return (
     <>
       <Head>
@@ -19,6 +26,20 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main className="no-scrollbar">
         <Component {...pageProps} />
       </main>
+
+      {pageY > 0 && (
+        <aside>
+          <Button
+            type="button"
+            onClick={() =>
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+            }
+            className="right-8 bottom-8"
+          >
+            <Icon shape="double-up" className="text-white w-8 h-8" />
+          </Button>
+        </aside>
+      )}
     </>
   );
 }
