@@ -1,50 +1,34 @@
 import type { GetStaticProps, NextPage } from "next";
-import { readFileSync } from "fs";
+import { readFile } from "fs/promises";
 import matter from "gray-matter";
+import { unified } from "unified";
+import remarkParse from "remark-parse/lib";
+import remarkHtml from "remark-html";
 
 // component
 import Cover from "@src/components/Cover";
 import Skills from "@src/components/Skills";
-import Projects from "@src/components/Project";
+import Projects from "@src/components/Projects";
 
 // type
-import { DataType } from "@src/types";
-import Project from "@src/components/Project";
-type Props = DataType;
+import { CoverType, ProjectsType, SkillsType } from "@src/types";
+type Props = {
+  cover: CoverType;
+  skills: SkillsType;
+  projects: ProjectsType;
+};
 
-const Home: NextPage<Props> = ({
-  title,
-  email,
-  phone,
-  contents,
-  updatedAt,
-  skills,
-  projects,
-}) => {
+const Home: NextPage<Props> = ({ cover, skills, projects }) => {
   return (
     <>
       {/* 표지 */}
-      <Cover
-        title={title}
-        contents={contents}
-        updatedAt={updatedAt}
-        email={email}
-        phone={phone}
-      />
+      <Cover {...cover} />
 
       {/* 스킬 */}
-      <Skills skills={skills} />
+      <Skills {...skills} />
 
       {/* 프로젝트들 */}
-      <article>
-        <h2 className="text-center font-bold text-6xl mt-20 mb-4">Projects.</h2>
-
-        <ul className="w-3/5 min-w-[500px] mx-auto space-y-8">
-          {projects.map((project) => (
-            <Project key={project.name} project={project} />
-          ))}
-        </ul>
-      </article>
+      <Projects {...projects} />
 
       {/* 스크롤 테스트 */}
       <div className="h-[100vh]"></div>
@@ -53,12 +37,55 @@ const Home: NextPage<Props> = ({
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const markdownFile = readFileSync("./src/markdowns/data.md");
-  const data = JSON.parse(JSON.stringify(matter(markdownFile).data)) as Props;
+  // 파일 읽기
+  const coverFilePromise = readFile("./src/markdowns/cover.md");
+  const skillsFilePromise = readFile("./src/markdowns/skills.md");
+  const projectsFilePromise = readFile("./src/markdowns/projects.md");
+  const [coverFile, skillsFile, projectsFile] = await Promise.all([
+    coverFilePromise,
+    skillsFilePromise,
+    projectsFilePromise,
+  ]);
+
+  // front-matter 분리하기
+  const parsedCover = JSON.parse(JSON.stringify(matter(coverFile)));
+  const parsedSkills = JSON.parse(JSON.stringify(matter(skillsFile)));
+  const parsedProjects = JSON.parse(JSON.stringify(matter(projectsFile)));
+
+  // markdown 파싱
+  const parsedMarkdownCoverPromise = unified()
+    .use(remarkParse)
+    .use(remarkHtml)
+    .process(parsedCover.content);
+  const parsedMarkdownSkillsPromise = unified()
+    .use(remarkParse)
+    .use(remarkHtml)
+    .process(parsedSkills.content);
+  const parsedMarkdownProjectsPromise = unified()
+    .use(remarkParse)
+    .use(remarkHtml)
+    .process(parsedProjects.content);
+  const [parsedMarkdownCover, parsedMarkdownSkills, parsedMarkdownProjects] =
+    await Promise.all([
+      parsedMarkdownCoverPromise,
+      parsedMarkdownSkillsPromise,
+      parsedMarkdownProjectsPromise,
+    ]);
 
   return {
     props: {
-      ...data,
+      cover: {
+        ...parsedCover.data,
+        content: parsedMarkdownCover.value,
+      },
+      skills: {
+        ...parsedSkills.data,
+        content: parsedMarkdownSkills.value,
+      },
+      projects: {
+        ...parsedProjects.data,
+        content: parsedMarkdownProjects.value,
+      },
     },
   };
 };

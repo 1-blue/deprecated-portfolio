@@ -1,41 +1,40 @@
-// component
+import { useEffect, useState } from "react";
+
+// common-component
 import Icon from "@src/components/common/Icon";
-import Content from "@src/components/common/Content";
 import CustomLink from "@src/components/common/CustomLink";
 
-// type
-import { DataType } from "@src/types";
-type Props = Pick<
-  DataType,
-  "title" | "contents" | "updatedAt" | "email" | "phone"
->;
+// util
+import { dateOrTimeFormat } from "@src/libs/dateFormat";
 
-const Cover = ({ title, contents, updatedAt, email, phone }: Props) => {
+// type
+import { CoverType } from "@src/types";
+type Props = CoverType;
+
+const Cover = ({ updatedAt, email, phone, content }: Props) => {
+  const [delayTime, setDelayTime] = useState<number>(0);
+
+  // 2022/06/27 - 애니메이션 딜레이 시간 구하기 ( +2 하는 이유는 기본 딜레이(+1)와 마지막 애니메이션 후 지연시간(+1) 때문 )
+  useEffect(() => {
+    setDelayTime((content.match(/<h2>/g)?.length || 0) + 2);
+  }, [content, setDelayTime]);
+
   return (
     <article className="relative bg-me h-screen bg-cover bg-center bg-no-repeat bg-fixed flex flex-col justify-center items-center">
       {/* opacity background */}
       <aside className="absolute w-full h-screen bg-black opacity-60" />
 
-      {/* 메인 타이틀 */}
-      <h1
-        className="z-0 text-white font-bold text-5xl mb-10 animate-slide-bottom opacity-0 mx-[14vw]"
-        style={{
-          animationDelay: "1s",
-        }}
-      >
-        {title}
-      </h1>
-
-      {/* 서브 타이틀 */}
-      {contents.map((content, index) => (
-        <Content key={index} content={content} delay={2.2 + index} />
-      ))}
+      {/* 타이틀과 자기소개 */}
+      <section
+        className="cover z-0"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
 
       {/* 깃헙, 벨로그, 트렐로 */}
       <section
         className="z-0 animate-slide-bottom opacity-0"
         style={{
-          animationDelay: contents.length + 2.2 + "s",
+          animationDelay: delayTime + "s",
         }}
       >
         <h3 className="text-white font-bold text-3xl mt-10 mb-4 text-center">
@@ -58,7 +57,7 @@ const Cover = ({ title, contents, updatedAt, email, phone }: Props) => {
       <section
         className="z-0 animate-slide-bottom opacity-0"
         style={{
-          animationDelay: contents.length + 2.2 + "s",
+          animationDelay: delayTime + 1 + "s",
         }}
       >
         <h3 className="text-white font-bold text-3xl mt-10 mb-4 text-center">
@@ -77,25 +76,36 @@ const Cover = ({ title, contents, updatedAt, email, phone }: Props) => {
         </ul>
       </section>
 
-      <Icon
-        shape="arrow-down"
-        fill
-        className="z-0 w-24 h-24 text-white animate-bounce mt-20"
-      />
+      {/* 화살표 및 텍스트로 적힌 이메일 휴대폰 번호 */}
+      <section
+        className="z-0 animate-slide-bottom opacity-0"
+        style={{
+          animationDelay: delayTime + 2 + "s",
+        }}
+      >
+        <Icon
+          shape="arrow-down"
+          fill
+          className="z-0 w-24 h-24 text-white animate-bounce mt-20 mx-auto"
+        />
 
-      <section className="z-0 bg-white flex flex-col p-4 rounded-md mt-2">
-        <span className="text-center">
-          Email:{" "}
-          <strong className="underline-offset-2 decoration-2 hover:underline">
-            <a href={"mailto:" + email}>{email}</a>
-          </strong>
-        </span>
-        <span className="text-center">
-          Phone:{" "}
-          <strong className="underline-offset-2 decoration-2 hover:underline">
-            <a href={"tel:" + phone}>{phone}</a>
-          </strong>
-        </span>
+        <div className="z-0 bg-white flex flex-col p-4 rounded-md mt-2">
+          <span className="text-center">
+            Email:{" "}
+            <strong className="underline-offset-2 decoration-2 hover:underline">
+              <a href={"mailto:" + email}>{email}</a>
+            </strong>
+          </span>
+          <span className="text-center">
+            Phone:{" "}
+            <strong className="underline-offset-2 decoration-2 hover:underline">
+              <a href={"tel:" + phone}>{phone}</a>
+            </strong>
+          </span>
+          <span className="text-center">
+            마지막 수정: {dateOrTimeFormat(updatedAt, "YYYY-MM-DD-HH-MM-SS")}
+          </span>
+        </div>
       </section>
     </article>
   );

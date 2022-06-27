@@ -1,9 +1,13 @@
-export type DataType = {
-  title: string;
-  contents: string[];
-  updatedAt: Date;
+type Content = {
+  content: string;
+};
+
+export type CoverType = {
   email: string;
   phone: string;
+  updatedAt: Date;
+} & Content;
+export type SkillsType = {
   skills: {
     "HTML/CSS": string;
     JavaScript: string;
@@ -14,24 +18,25 @@ export type DataType = {
     Mysql: string;
     "Git/GitHub": string;
     Trello: string;
+    [index: string]: string;
   };
-  projects: ProjectType[];
-};
-
-export type ProjectType = {
-  name: string;
-  skills: string[];
-  description: string;
-  thumbnails: string[];
-  links: {
-    deploy: string;
-    github: string;
-    trello: string;
-    velog: string;
-  };
-  date: {
-    start: Date;
-    end: Date;
-  };
-  logoColor: string;
-};
+} & Content;
+export type ProjectsType = {
+  projects: {
+    name: string;
+    skills: string[];
+    description: string;
+    thumbnails: string[];
+    links: {
+      deploy: string;
+      github: string;
+      trello: string;
+      velog: string;
+    };
+    date: {
+      start: Date;
+      end: Date;
+    };
+    logoColor: string;
+  }[];
+} & Content;
