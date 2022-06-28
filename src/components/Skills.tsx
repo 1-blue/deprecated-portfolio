@@ -19,7 +19,7 @@ type Props = SkillsType;
 
 const Skills = ({ skills, content }: Props) => {
   // 2022/06/27 - 전체 열지 닫을지 결정 - by 1-blue
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
   // 2022/06/27 - 파싱된 마크다운이 들어갈 변수 - by 1-blue
   const [descriptions, setDescriptions] = useState<any[]>([]);
   // 2022/06/27 - markdown parsing - by 1-blue

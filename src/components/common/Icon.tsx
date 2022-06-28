@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { CSSProperties, useCallback } from "react";
 
 // util
 import { combineClassNames } from "@src/libs/utils";
@@ -16,9 +16,10 @@ type Props = {
     | "double-up";
   fill?: boolean;
   className?: string;
+  style?: CSSProperties;
 };
 
-const Icon = ({ shape, fill, className }: Props) => {
+const Icon = ({ shape, fill, className, style }: Props) => {
   const getIcon = useCallback(() => {
     switch (shape) {
       case "arrow-down":
@@ -166,6 +167,7 @@ const Icon = ({ shape, fill, className }: Props) => {
           height="24"
           viewBox="0 0 40 40"
           fill="currentColor"
+          style={style}
           className={combineClassNames(
             "w-14 h-14 bg-white rounded-md peer p-1",
             className ? className : ""
@@ -197,6 +199,7 @@ const Icon = ({ shape, fill, className }: Props) => {
           viewBox="0 0 24 24"
           stroke="currentColor"
           strokeWidth={1}
+          style={style}
           className={className ? className : ""}
         >
           {getIcon()}

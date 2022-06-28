@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         trello: "#1A76E3",
         velog: "#63E6BE",
+        project: "#282A36",
       },
       backgroundImage: {
         me: "url('/me.jpg')",

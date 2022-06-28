@@ -29,9 +29,6 @@ const Home: NextPage<Props> = ({ cover, skills, projects }) => {
 
       {/* 프로젝트들 */}
       <Projects {...projects} />
-
-      {/* 스크롤 테스트 */}
-      <div className="h-[100vh]"></div>
     </>
   );
 };

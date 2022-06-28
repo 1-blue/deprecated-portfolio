@@ -17,7 +17,7 @@ const Photo = ({ photo, className, $cover, $contain, $priority }: Props) => {
       {photo ? (
         <figure
           className={combineClassNames(
-            "relative bg-stone-800",
+            "relative bg-neutral-500",
             className ? className : ""
           )}
         >

@@ -50,8 +50,8 @@ const useScrollZoom = ({ duration = 1, delay = 0 }: Props): ReturnType => {
 
     // 0.1로 지정한 이유는 50% 이동 시 조금이라도 영역밖으로 나가면 애니메이션이 발동안하기 때문
     let observer = new IntersectionObserver(onScroll, {
-      threshold: 0.4,
-      rootMargin: "20px",
+      threshold: 0.2,
+      rootMargin: "40px",
     });
     observer.observe(elementRef.current);
 

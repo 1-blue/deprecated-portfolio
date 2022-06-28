@@ -16,7 +16,7 @@ const Cover = ({ updatedAt, email, phone, content }: Props) => {
 
   // 2022/06/27 - 애니메이션 딜레이 시간 구하기 ( +2 하는 이유는 기본 딜레이(+1)와 마지막 애니메이션 후 지연시간(+1) 때문 )
   useEffect(() => {
-    setDelayTime((content.match(/<h2>/g)?.length || 0) + 2);
+    setDelayTime((content.match(/<p>/g)?.length || 0) + 2);
   }, [content, setDelayTime]);
 
   return (
@@ -37,9 +37,9 @@ const Cover = ({ updatedAt, email, phone, content }: Props) => {
           animationDelay: delayTime + "s",
         }}
       >
-        <h3 className="text-white font-bold text-3xl mt-10 mb-4 text-center">
+        <h4 className="text-white font-bold text-3xl mt-10 mb-4 text-center">
           Contect.
-        </h3>
+        </h4>
         <ul className="flex space-x-16">
           <CustomLink href="https://github.com/1-blue">
             <Icon shape="github" />
@@ -60,9 +60,9 @@ const Cover = ({ updatedAt, email, phone, content }: Props) => {
           animationDelay: delayTime + 1 + "s",
         }}
       >
-        <h3 className="text-white font-bold text-3xl mt-10 mb-4 text-center">
+        <h4 className="text-white font-bold text-3xl mt-10 mb-4 text-center">
           Channel.
-        </h3>
+        </h4>
         <ul className="flex space-x-16">
           <CustomLink href={"mailto:" + email}>
             <Icon shape="email" />
