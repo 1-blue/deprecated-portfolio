@@ -1,3 +1,8 @@
+import { useEffect, useState } from "react";
+import { unified } from "unified";
+import remarkParse from "remark-parse/lib";
+import remarkHtml from "remark-html";
+
 // common-component
 import Carousel from "@src/components/common/Carousel";
 import CustomLink from "@src/components/common/CustomLink";
@@ -24,6 +29,19 @@ const Project = ({
   skills,
   thumbnails,
 }: Props) => {
+  // 2022/07/07 - 프로젝트 내용 파싱 - by 1-blue
+  const [parsedDescription, setParsedDescription] = useState<any>("");
+  useEffect(() => {
+    (async () => {
+      const markdown = await unified()
+        .use(remarkParse)
+        .use(remarkHtml)
+        .process(description);
+
+      setParsedDescription(markdown.value);
+    })();
+  }, [description]);
+
   return (
     <li
       className="bg-project px-10 py-6 rounded-md text-white shadow-xl"
@@ -48,8 +66,12 @@ const Project = ({
           ))}
         </Carousel>
 
-        <div className="space-y-8">
-          <p className="whitespace-pre-line">{description}</p>
+        <div className="space-y-4 flex flex-col p-4">
+          {/* <p className="whitespace-pre-line">{description}</p> */}
+          <div
+            className="project-description whitespace-pre-line flex-1"
+            dangerouslySetInnerHTML={{ __html: parsedDescription }}
+          />
 
           <ul className="space-x-2 mb-2">
             {skills.map((skill) => (

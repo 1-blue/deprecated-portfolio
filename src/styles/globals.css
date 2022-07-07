@@ -38,6 +38,10 @@
 
   .projects h1 { @apply text-center font-bold text-5xl mt-20 mb-4 }
 
+  .project-description a { @apply text-indigo-400 transition-colors }
+  .project-description a:hover { @apply text-indigo-600 underline underline-offset-2 decoration-2 }
+  .project-description blockquote { @apply border-l-4 px-4 bg-slate-600 border-indigo-600 }
+
 
   /* react-slick dots 수정 */
   .custom-dots {

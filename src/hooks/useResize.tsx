@@ -17,6 +17,9 @@ const useResize = (): Size => {
     return () => window.removeEventListener("resize", handleRedize);
   }, [handleRedize]);
 
+  // 초기화
+  useEffect(() => handleRedize(), [handleRedize]);
+
   return size;
 };
 

@@ -57,7 +57,7 @@ const TOC = () => {
   }, []);
 
   return (
-    <aside className="fixed top-10 right-10 border-l-4 border-indigo-400 px-4 py-2 bg-white z-10">
+    <aside className="fixed top-10 right-10 border-l-4 border-indigo-400 px-4 py-2 bg-slate-200 z-10">
       <ul>
         {indexList.map(({ index, size }) => (
           <li
