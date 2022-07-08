@@ -73,7 +73,7 @@ const Skills = ({ skills, content }: Props) => {
         />
 
         <ul
-          className="min-w-[500px] w-1/2 mx-auto mt-4 space-y-4"
+          className="w-4/5 lg:w-1/2 mx-auto mt-4 space-y-4"
           ref={skillWapperRef}
         >
           {Object.entries(skills).map((v, i) => (

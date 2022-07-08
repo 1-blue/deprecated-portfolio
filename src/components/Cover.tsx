@@ -37,7 +37,7 @@ const Cover = ({ updatedAt, email, phone, content }: Props) => {
           animationDelay: delayTime + "s",
         }}
       >
-        <h4 className="text-white font-bold text-3xl mt-10 mb-4 text-center">
+        <h4 className="text-white font-bold text-3xl mt-6 mb-4 text-center">
           Contect.
         </h4>
         <ul className="flex space-x-16">
@@ -60,7 +60,7 @@ const Cover = ({ updatedAt, email, phone, content }: Props) => {
           animationDelay: delayTime + 1 + "s",
         }}
       >
-        <h4 className="text-white font-bold text-3xl mt-10 mb-4 text-center">
+        <h4 className="text-white font-bold text-3xl mt-6 mb-4 text-center">
           Channel.
         </h4>
         <ul className="flex space-x-16">
@@ -86,7 +86,7 @@ const Cover = ({ updatedAt, email, phone, content }: Props) => {
         <Icon
           shape="arrow-down"
           fill
-          className="z-0 w-24 h-24 text-white animate-bounce mt-20 mx-auto"
+          className="z-0 w-24 h-24 text-white animate-bounce mt-10 mx-auto"
         />
 
         <div className="z-0 bg-white flex flex-col p-4 rounded-md mt-2">

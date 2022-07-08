@@ -14,7 +14,7 @@ const Projects = ({ projects, content }: Props) => {
         dangerouslySetInnerHTML={{ __html: content }}
       />
 
-      <ul className="w-3/5 min-w-[500px] mx-auto space-y-8">
+      <ul className="w-4/5 lg:w-1/2 mx-auto space-y-8">
         {projects.map((project) => (
           <Project key={project.name} {...project} />
         ))}

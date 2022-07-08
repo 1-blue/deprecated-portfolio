@@ -23,8 +23,8 @@
   }
 
   /* markdown으로 가져온 내용 스타일 수정 */
-  .cover h1 { @apply text-white font-bold text-5xl mb-10 mx-[14vw] opacity-0 animation-delay-1000 animate-slide-bottom }
-  .cover p { @apply z-0 text-white text-2xl text-center whitespace-pre-line mx-[10vw] opacity-0 animate-slide-right }
+  .cover h1 { @apply text-white font-bold text-4xl mb-6 mx-[14vw] opacity-0 animation-delay-1000 animate-slide-bottom sm:text-5xl }
+  .cover p { @apply z-0 text-white text-xl text-center whitespace-pre-line mx-[10vw] opacity-0 animate-slide-right sm:text-2xl }
   .cover p:nth-child(even) { @apply animate-slide-right }
   .cover p:nth-child(odd) { @apply animate-slide-left }
   .cover p:nth-child(2) { @apply animation-delay-2000 }

@@ -44,7 +44,7 @@ const Project = ({
 
   return (
     <li
-      className="bg-project px-10 py-6 rounded-md text-white shadow-xl"
+      className="bg-project p-4 sm:px-10 sm:py-6 rounded-md text-white shadow-xl"
       {...useScrollZoom({})}
     >
       <h2 className="font-bold text-4xl text-center">{name}</h2>
@@ -67,7 +67,6 @@ const Project = ({
         </Carousel>
 
         <div className="space-y-4 flex flex-col p-4">
-          {/* <p className="whitespace-pre-line">{description}</p> */}
           <div
             className="project-description whitespace-pre-line flex-1"
             dangerouslySetInnerHTML={{ __html: parsedDescription }}
