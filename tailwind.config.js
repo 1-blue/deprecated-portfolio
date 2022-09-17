@@ -28,12 +28,17 @@ module.exports = {
           "0%": { opacity: 0.1, transform: "translateX(40px)" },
           "100%": { opacity: 1, transform: "translateX(0px)" },
         },
+        "fade-in": {
+          "0%": { opacity: 0.01 },
+          "100%": { opacity: 1 },
+        },
       },
       animation: {
         appear: "appear 1.6s ease-in forwards",
         "slide-bottom": "slide-bottom 1.6s ease-out forwards",
         "slide-left": "slide-left 1.6s ease-out forwards",
         "slide-right": "slide-right 1.6s ease-out forwards",
+        "fade-in": "fade-in 0.2s linear",
       },
     },
   },

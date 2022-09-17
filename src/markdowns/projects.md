@@ -1,6 +1,28 @@
 ---
 projects: [
   {
+    name: "BleShop",
+    skills: ["Next.js", "TypeScript", "TailwindCss", "next-auth", "recoil", "prisma", "AWS-EC2", "AWS-S3"],
+    description: "지금까지 공부해봤던 라이브러리들 중에서 가장 편했던것을 고르고, 새롭게 시도할 것을 선택해 적용한 프로젝트입니다.\n\n프로젝트의 첫 번째 목적은 타입을 제대로 활용하는 것입니다. 다른 프로젝트를 만들다가 항상 느꼈던 부분이 가면 갈수록 타입이 꼬여서 수정이 너무 어려워지는 문제를 겪어왔습니다. 처음부터 타입을 제대로 지정하고 문제없이 동작하도록 코드를 구성했습니다.\n두 번째로는 결제 기능입니다. 뭔가 실제로 사용할 수 있는 프로젝트를 만들어보고 싶었습니다.\n마지막으로 버그 없는 프로젝트입니다. 여태까지 만들었던 모든 프로젝트는 작든 크든 배포만하면 항상 버그가 생겼는데 이번에는 모든 버그와 경고는 해결하고 문제 없이 동작하도록 만들었습니다.",
+    thumbnails: [
+      "https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/payment.gif",
+      "https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/mobile_payment.gif",
+      "https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/infinite_scrolling.gif",
+      "https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/upload_photo.gif",
+    ],
+    links: {
+      deploy: "https://bleshop.shop",
+      github: "https://github.com/1-blue/bleshop",
+      trello: "https://trello.com/b/LB5XaYBq/bleshop",
+      velog: "https://velog.io/@1-blue/series/bleshop",
+    },
+    date: {
+      start: 2022-08-08,
+      end: 2022-09-17,
+    },
+    logoColor: "#FF0000"
+  },
+  {
     name: "Portfolio",
     skills: ["TypeScript", "Next.js", "TailwindCss", "Vercel"],
     description: "가볍게 Next.js에 TypeScript를 곁들여서 만든 프로젝트입니다.\nCSS는 TailwindCss를 이용했고, 배포는 Versel을 이용해서 간단하게 처리했습니다.\n\n[`<details>`에 ResizeObserver를 이용해서 스킬을 구현](https://velog.io/@1-blue/%EC%83%81%EC%84%B8-%EB%82%B4%EC%9A%A9-%EB%B3%B4%EA%B8%B0-details-summary)했고, IntersectionObserver을 이용해서 [스크롤 애니메이션](https://velog.io/@1-blue/%EC%8A%A4%ED%81%AC%EB%A1%A4%EC%97%90-%EC%9D%98%ED%95%9C-%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98)과 [TOC](https://velog.io/@1-blue/%EB%AA%A9%EC%B0%A8-%EC%8A%A4%ED%81%AC%EB%A1%A4-TOC)를 구현했으며, 모든 데이터들은 정적인 markdown파일로 따로 관리하며 빌드 시 파일을 읽어서 내용을 채우도록 [데이터와 동작 로직을 분리](https://velog.io/@1-blue/%EC%A0%95%EC%A0%81-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B4%80%EB%A6%AC-%EB%B0%8F-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%ED%8C%8C%EC%8B%B1)했습니다.",

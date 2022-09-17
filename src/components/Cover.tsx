@@ -103,7 +103,7 @@ const Cover = ({ updatedAt, email, phone, content }: Props) => {
             </strong>
           </span>
           <span className="text-center">
-            마지막 수정: {dateOrTimeFormat(updatedAt, "YYYY-MM-DD-HH-MM-SS")}
+            마지막 수정: {dateOrTimeFormat(updatedAt, "YYYY-MM-DD")}
           </span>
         </div>
       </section>
