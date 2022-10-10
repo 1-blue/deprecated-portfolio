@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>프론트엔드 포트폴리오 - 박상은</title>
+  
+  <meta name="author" content="1-blue" />
+  <meta name="description" content="프론트엔드 개발자 준비생 &quot;박상은&quot;의 포트폴리오 웹사이트입니다." />
+  <meta name="keywords" content="html, css, javascript, typescript, frontend, front-end, portfolio, developer, 웹개발자, 프론트엔드, 웹개발자포트폴리오" />
+
+  <!-- favicon -->
+  <link href="https://1-blue.github.io/portfolio/public/logo.ico" rel="shortcut icon" />
+
+  <!-- 카카오톡, 네이버 블로그 미리보기에 제공될 정보 -->
+  <meta property="og:title" content="프론트엔드 포트폴리오 - 박상은" />
+  <meta property="og:description" content="프론트엔드 개발자 준비생 &quot;박상은&quot;의 포트폴리오 웹사이트입니다." />
+  <meta property="og:image" content="https://1-blue.github.io/portfolio/public/logo.jpg" />
+
+  <!-- 트위터 미리보기에 제공될 정보 -->
+  <meta name="twitter:card" content="프론트엔드 포트폴리오 - 박상은&#8203;프론트엔드 개발자 준비생 &quot;박상은&quot;의 포트폴리오 웹사이트입니다." />
+  <meta name="twitter:title" content="프론트엔드 포트폴리오 - 박상은" />
+  <meta name="twitter:description" content="프론트엔드 개발자 준비생 &quot;박상은&quot;의 포트폴리오 웹사이트입니다." />
+  <meta name="twitter:image" content="https://1-blue.github.io/portfolio/public/logo.jpg" />
+
+  <!-- Noto Sans by google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500;900&display=swap" rel="stylesheet">
+
+  <!-- reset css -->
+  <link rel="stylesheet" href="./src/css/reset.css">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./src/css/index.css">
+
+  <!-- js -->
+  <script defer type="module" src="./src/js/index.js"></script>
+</head>
+<body>
+  <!-- 배경화면 -->
+  <section id="background" class="fixed">
+    <svg id="sky"></svg>
+  </section>
+
+  <!-- 상단 스크롤바 -->
+  <aside id="scroll-progressbar"></aside>
+
+  <!-- TOC ( table of contents ) - 목차 스크롤 -->
+  <nav id="toc"></nav>
+
+  <!-- scene0 - 이름과 소개 -->
+  <section id="scene" class="scene-a intro">
+    <div id="cover" class="flex-center">
+      <h1 class="title">Portfolio</h1>
+    </div>
+    
+    <div class="fixed flex-center">
+      <span class="message message-a">탐구하고 이해하는 것을 좋아하는 박상은입니다.</span>
+      <p class="message message-b">
+        신입 프론트엔드 개발자를 희망합니다.
+        항상 원리를 이해하고 사용하려고 노력합니다.
+        의구심이 생기는 것을 끝까지 파고들어 이해하려고 합니다.
+      </p>
+      <div class="message message-c flex-center">
+        <span>Contact.</span>
+        <div>
+          <!-- GitHub -->
+          <a target="_blank" href="https://github.com/1-blue">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="60"
+            height="60"
+            viewBox="0 0 30 30"
+            >
+              <path
+                fill="#FFF"
+                d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526
+                c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098
+                c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594
+                c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z" />
+            </svg>
+          </a>
+          <!-- Velog -->
+          <a target="_blank" href="https://velog.io/@1-blue">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="60"
+            height="60"
+            viewBox="0 0 448 512"
+            >
+              <path
+                fill="#66FFCC"
+                d="M0,24v448h448V24H0z M423.8,170.5c-1.8,38.9-28.9,92.2-81.6,159.9c-54.4,70.7-100.4,106.1-138,106.1
+                c-23.3,0-43-21.5-59.2-64.6C113.6,256.6,100.2,189,74.2,189c-3,0-13.5,6.3-31.4,18.8L24,183.6c46.1-40.4,90.1-85.4,117.7-87.9
+                c31.2-3,50.3,18.3,57.5,63.8c25.6,162.1,37,186.5,83.6,113.1c16.7-26.4,25.7-46.5,27-60.4c4.3-41-32-38.2-56.5-27.7
+                c19.6-64.4,57.2-95.6,112.7-93.8C406.8,91.8,426.1,118.5,423.8,170.5z"/>
+              <path
+                fill="#FFF"
+                d="M365.9,90.7c-55.4-1.8-93,29.5-112.7,93.8c24.6-10.5,60.8-13.3,56.5,27.7c-1.2,13.8-10.3,33.9-27,60.4
+                c-46.6,73.4-57.9,48.9-83.6-113.1c-7.2-45.5-26.3-66.9-57.5-63.8c-27.6,2.5-71.6,47.5-117.7,87.9l18.7,24.3
+                C60.7,195.3,71.1,189,74.2,189c26,0,39.4,67.6,70.8,182.9c16.2,43,35.9,64.6,59.2,64.6c37.7,0,83.7-35.4,138-106.1
+                c52.7-67.7,79.8-121,81.6-159.9C426.1,118.5,406.8,91.8,365.9,90.7z"/>
+            </svg>
+          </a>
+          <!-- phone -->
+          <a href="tel:010-2103-8259">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="60"
+              height="60"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="#FFF"
+                d="M368 0h-224c-26.4 0-48 21.6-48 48v416c0 26.4 21.6 48 48 48h224c26.4 0 48-21.6 48-48v-416c0-26.4-21.6-48-48-48zM192
+                24h128v16h-128v-16zM256 480c-17.673 0-32-14.327-32-32s14.327-32 32-32 32 14.327 32 32-14.327 32-32 32zM384 384h-256v-320h256v320z" />
+            </svg>
+          </a>
+          <!-- email -->
+          <a href="mailto:1-blue98@naver.com">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="60"
+            height="60"
+            viewBox="0 0 512 512"
+            >
+              <path
+                fill="#FFF"
+                d="M464 64h-416c-26.4 0-48 21.6-48 48v320c0 26.4 21.6 48 48 48h416c26.4 0 48-21.6 48-48v-320c0-26.4-21.6-48-48-48zM199.37 275.186l-135.37 105.446v-250.821l135.37
+                145.375zM88.19 128h335.62l-167.81 126-167.81-126zM204.644 280.849l51.356 55.151 51.355-55.151 105.277 135.151h-313.264l105.276-135.151zM312.63 275.186l135.37-145.375v250.821l-135.37-105.446z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- scene1 - 기술들 -->
+  <section id="scene" class="scene-b skills">
+    <h1 class="title">Skills.</h1>
+
+    <details>
+      <summary>
+        <span><strong>HTML</strong></span>
+      </summary>
+      <p>
+        시멘틱 구조와 웹 접근성을 생각하면서 마크업 합니다.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span><strong>CSS</strong></span>
+      </summary>
+      <p>
+        순수한 CSS에 대해 먼저 알고 전처리기나 프레임워크에 관해 공부하려고 노력합니다.<br />
+        또한 선택자, 의사 클래스, 의사 요소에 대한 기본적인 이해를 하고 있습니다.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span><strong>JavaScript</strong></span>
+      </summary>
+      <p>
+        자바스크립트에서 이용되는 개념인 
+        <a target="_blank" href="https://velog.io/@1-blue/%EC%8B%A4%ED%96%89-%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8-%EC%8A%A4%EC%BD%94%ED%94%84-%EC%B2%B4%EC%9D%B8-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85-%ED%81%B4%EB%A1%9C%EC%A0%80%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C">실행 컨텍스트, 클로저, 호이스팅, 스코프 체인</a>,
+        <a target="_blank" href="https://velog.io/@1-blue/%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-prototype">프로토타입</a> 등을 이해하고 있으며, 사용할 수 있습니다.<br />
+        또한 ES6 문법에 익숙하고, 비동기 처리를 위해 사용하는 <a target="_blank" href="https://velog.io/@1-blue/Promise-async-await">Promise, async, await</a>에 대해 이해하고 있으며, 사용할 수 있습니다.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span><strong>TypeScript</strong></span>
+      </summary>
+      <p>
+        타입과 인터페이스의 선언과 사용에 익숙하고 상속에 대해 이해하고 있습니다.<br />
+        또한 몇몇 유틸리티 타입들을 직접 만들어보고, React.js와 Next.js에서 사용한 경험이 있습니다.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span><strong>React.js</strong></span>
+      </summary>
+      <p>
+        <a target="_blank" href="https://velog.io/@1-blue/React%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C#-react%EC%9D%98-%EC%82%AC%EC%9A%A9-%EC%9D%B4%EC%9C%A0">React.js의 동작 방식과 훅들에 대해 이해</a>하고 있으며, 사용한 경험이 있습니다.<br />
+        또한 몇 가지 프로젝트에 사용해 배포해본 경험이 있으며, TypeScript와 함께 사용하는 것을 훨씬 좋아합니다.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span><strong>Next.js</strong></span>
+      </summary>
+      <p>
+        기본적으로 제공해주는 기능들인 페이지 라우팅, 이미지 최적화, 미들웨어, API 라우팅 등의 전반적인 개념을 이해하고 있습니다.<br />
+        또한 <a target="_blank" href="https://velog.io/@1-blue/CSR-SSR-SSG-ISR-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC-Next.js">CSR, SSR, SSG, ISR에 대한 이해</a>와 사용 경험이 있으며, 상황에 맞게 어떤 기능을 적용할지 스스로 판단할 수 있습니다.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span><strong>Node.js</strong></span>
+      </summary>
+      <p>
+        서버 구현(Express), ORM(<a target="_blank" href="https://velog.io/@1-blue/sequelize">sequlize</a>, prisma), auth(<a target="_blank" href="https://velog.io/@1-blue/passport">passport</a>)에 대한 경험이 있습니다.
+        또한 <a target="_blank" href="https://velog.io/@1-blue/%EC%BF%A0%ED%82%A4%EC%99%80-%EC%84%B8%EC%85%98">쿠키와 세션의 개념</a>에 대해 이해하고 있습니다.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span><strong>Mysql</strong></span>
+      </summary>
+      <p>
+        DDL, DCL, DML에 관해 공부했으며, 간단한 SQL을 작성하거나 보고 이해할 수 있습니다. ( <a target="_blank" href="https://velog.io/@1-blue/mysql">mysql 정리</a> )<br />
+        또한 index와 각 key들에 역할을 알고 있고, 1:1, 1:N, N:M 관계를 이해하고 있습니다.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span><strong>Git/GitHub</strong></span>
+      </summary>
+      <p>
+        <a target="_blank" href="https://velog.io/@1-blue/Git%EA%B3%BC-GitHub-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC">Git과 GitHub</a>의 개념을 이해하고 있으며, 사용해본 경험이 있습니다.<br />
+        또한 Git-Flow 방식을 이해하고 있습니다.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <span><strong>Trello</strong></span>
+      </summary>
+      <p>
+        개발 진행 상황 기록과 개발 일정 관리를 위해 사용한 경험이 있습니다.
+      </p>
+    </details>
+
+    <button type="button" class="skill-toggle-btn">
+      <span>열기</span>
+      <div class="ping"></div>
+    </button>
+  </section>
+
+  <!-- scene2 - 프로젝트들 -->
+  <ul id="scene" class="scene-c projects">
+    <h1 class="title">Projects.</h1>
+
+    <li class="filp">
+      <div class="card">
+        <div class="front">
+          <div class="thumbnail-container">
+            <figure class="thumbnail" style="background-image: url('./public/images/bleshop_thumbnail.jpg')">
+              <img src="./public/images/bleshop_thumbnail.jpg" alt="" hidden />
+            </figure>
+
+            <div class="thumbnail-cover"></div>
+          </div>
+          <h2>Bleshop</h2>
+          <p>- <code>Next.js</code> + <code>TypeScript</code> + <code>TailwindCss</code> 기반의 프로젝트
+            - 웹이지만 앱같은 디자인 적용 / 반응형 적용
+            - <code>TypeScript Utility Types</code> 적극 사용
+            - 가독성 및 유지 · 보수를 충분히 생각한 코드 작성
+            - <code>Recoil</code>을 사용한 상태 관리
+            - <code>next-auth</code>를 사용한 인증 처리 ( kakao, google )
+            - <code>Prisma</code>와 <code>Mysql</code>을 이용한 데이터 처리
+            - <code>AWS-S3</code>의 <code>presignedURL</code>방식을 이용한 이미지 업로드
+            - <code>AWS-EC2</code> 프리티어 <code>ubuntu 20.04</code>를 이용한 배포
+            - <code>Nginx</code> + <code>CertBot</code>를 이용한 https 적용
+            - <code>gabia</code>를 이용한 <code>domain</code> 적용
+            - 웹 접근성을 고려한 코드 작성
+          </p>
+          <div style="flex: 1;"></div>
+          <div class="tags">
+            <span>TypeScript</span>
+            <span>Next.js</span>
+            <span>TailwindCss</span>
+            <span>next-auth</span>
+            <span>recoil</span>
+            <span>prisma</span>
+            <span>AWS-EC2</span>
+            <span>AWS-S3</span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="img-window">
+            <div class="img-container">
+              <figure class="img" style="background-image: url('https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/payment.gif')">
+                <img src="https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/payment.gif" alt="" hidden />
+              </figure>
+              <figure class="img" style="background-image: url('https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/mobile_payment.gif')">
+                <img src="https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/mobile_payment.gif" alt="" hidden />
+              </figure>
+              <figure class="img" style="background-image: url('https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/infinite_scrolling.gif')">
+                <img src="https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/infinite_scrolling.gif" alt="" hidden />
+              </figure>
+              <figure class="img" style="background-image: url('https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/upload_photo.gif')">
+                <img src="https://bleshop.s3.ap-northeast-2.amazonaws.com/deployment/gif/upload_photo.gif" alt="" hidden />
+              </figure>
+            </div>
+          </div>
+          <div class="img-dot-btn-container">
+          </div>
+          <div class="img-btn-container">
+            <button type="button" data-direction="1">이전 이미지</button>
+            <button type="button" data-direction="-1">다음 이미지</button>
+          </div>
+          <div style="flex: 1;"></div>
+          <div class="link-wrapper">
+            <!-- GitHub -->
+            <a target="_blank" href="https://github.com/1-blue">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="60"
+                height="60"
+                viewBox="0 0 30 30"
+              >
+                <path
+                  fill="#000"
+                  d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526
+                  c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098
+                  c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594
+                  c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z" />
+              </svg>
+            </a>
+            <!-- Velog -->
+            <a target="_blank" href="https://velog.io/@1-blue">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="56"
+                height="56"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#66FFCC"
+                  d="M0,24v448h448V24H0z M423.8,170.5c-1.8,38.9-28.9,92.2-81.6,159.9c-54.4,70.7-100.4,106.1-138,106.1
+                  c-23.3,0-43-21.5-59.2-64.6C113.6,256.6,100.2,189,74.2,189c-3,0-13.5,6.3-31.4,18.8L24,183.6c46.1-40.4,90.1-85.4,117.7-87.9
+                  c31.2-3,50.3,18.3,57.5,63.8c25.6,162.1,37,186.5,83.6,113.1c16.7-26.4,25.7-46.5,27-60.4c4.3-41-32-38.2-56.5-27.7
+                  c19.6-64.4,57.2-95.6,112.7-93.8C406.8,91.8,426.1,118.5,423.8,170.5z"/>
+                <path
+                  fill="#FFF"
+                  d="M365.9,90.7c-55.4-1.8-93,29.5-112.7,93.8c24.6-10.5,60.8-13.3,56.5,27.7c-1.2,13.8-10.3,33.9-27,60.4
+                  c-46.6,73.4-57.9,48.9-83.6-113.1c-7.2-45.5-26.3-66.9-57.5-63.8c-27.6,2.5-71.6,47.5-117.7,87.9l18.7,24.3
+                  C60.7,195.3,71.1,189,74.2,189c26,0,39.4,67.6,70.8,182.9c16.2,43,35.9,64.6,59.2,64.6c37.7,0,83.7-35.4,138-106.1
+                  c52.7-67.7,79.8-121,81.6-159.9C426.1,118.5,406.8,91.8,365.9,90.7z"/>
+              </svg>
+            </a>
+            <!-- Trello -->
+            <a target="_blank" href="https://trello.com/b/LB5XaYBq/bleshop">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                width="60"
+                height="60"
+              >
+                <path
+                  fill="#1E88E5"
+                  d="M6,10c0-2.2,1.8-4,4-4h28c2.2,0,4,1.8,4,4v28c0,2.2-1.8,4-4,4H10c-2.2,0-4-1.8-4-4V10z"/>
+                <path
+                  fill="#FFF"
+                  d="M10,12.2c0-1.2,1-2.2,2.2-2.2h7.6c1.2,0,2.2,1,2.2,2.2v21.6c0,1.2-1,2.2-2.2,2.2h-7.6C11,36,10,35,10,33.8V12.2z M26,22.8c0,1.2,1,2.2,2.2,2.2h7.6c1.2,0,2.2-1,2.2-2.2V12.2c0-1.2-1-2.2-2.2-2.2h-7.6C27,10,26,11,26,12.2V22.8z"/>
+              </svg>
+            </a>
+            <!-- Logo -->
+            <a target="_blank" href="https://bleshop.shop">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="55"
+                height="55"
+                viewBox="0 0 40 40"
+                style="enable-background:new 0 0 40 40;"
+              >
+                <path
+                  fill="#FFF"
+                  d="M3,1h34c1.1,0,2,0.9,2,2v34c0,1.1-0.9,2-2,2H3c-1.1,0-2-0.9-2-2V3C1,1.9,1.9,1,3,1z"/>
+                <g>
+                  <path
+                    fill="none"
+                    d="M10.5,31l5.1-23.7c-5.4,1.9-9.2,7.3-9.2,13.5C6.4,24.6,7.9,28.4,10.5,31z"/>
+                  <path
+                    fill="none"
+                    d="M24.4,7.3L29.5,31c2.6-2.6,4.1-6.4,4.1-10.2C33.6,14.5,29.8,9.2,24.4,7.3z"/>
+                  <path
+                    fill="#D93B30"
+                    d="M3,20.9C3,28,7,34,12.7,37L20,3C10.6,3,3,11,3,20.9z M15.6,7.3L10.5,31c-2.6-2.6-4.1-6.4-4.1-10.2
+                    C6.4,14.6,10.2,9.2,15.6,7.3z"/>
+                  <path
+                    fill="#D93B30"
+                    d="M20,3l7.3,34C33,34,37,28,37,20.9C37,11,29.4,3,20,3z M29.5,31L24.4,7.3c5.4,1.9,9.2,7.2,9.2,13.5
+                    C33.6,24.6,32.1,28.4,29.5,31z"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div> 
+      </div>
+    </li>
+    <li class="filp">
+      <div class="card">
+        <div class="front">
+          <div class="thumbnail-container">
+            <figure class="thumbnail" style="background-image: url('./public/images/blegram_thumbnail.jpg')">
+              <img src="./public/images/blegram_thumbnail.jpg" alt="" hidden />
+            </figure>
+
+            <div class="thumbnail-cover"></div>
+          </div>
+          <h2>Blegram</h2>
+          <p>- 인스타그램의 웹과 앱을 보고 디자인과 기능을 적용함
+            - 기존 <code>React.js</code> 기반에서 <code>Next.js</code> + <code>TypeScript</code>로 업데이트
+            - 기존 <code>Redux</code> + <code>Redux-Saga</code> 기반에서 <code>Redux-Toolkit</code> + <code>Redux-Saga</code>로 업데이트
+            - <code>Socket.io</code>를 이용한 실시간 1:1 채팅 구현
+            - <code>Node.js</code>의 <code>Express</code>를 이용한 서버 로직 구현
+            - <code>Sequelize</code> + <code>Mysql</code>을 이용한 데이터 처리
+            - <code>Passport</code>를 이용한 인증 처리
+            - <code>AWS-EC2</code>의 <code>ubuntu 20.04</code>를 이용한 배포
+            - <code>Nginx</code> + <code>CertBot</code> + <code>gabia</code>를 이용한 <code>https</code>과 <code>domain</code>적용
+          </p>
+          <div style="flex: 1;"></div>
+          <div class="tags">
+            <span>TypeScript</span>
+            <span>Next.js</span>
+            <span>Redux-Toolkit</span>
+            <span>Redux-Saga</span>
+            <span>styled-components</span>
+            <span>Express</span>
+            <span>Sequelize</span>
+            <span>Passport</span>
+            <span>Socket.io</span>
+            <span>AWS-EC2</span>
+            <span>AWS-S3</span>
+          </div>
+        </div>
+        <div class="back">
+          <div class="img-window">
+            <div class="img-container">
+              <figure class="img" style="background-image: url('https://user-images.githubusercontent.com/63289318/172258740-bdc93fc5-05be-4831-888d-a5c32eb823fb.gif')">
+                <img src="https://user-images.githubusercontent.com/63289318/172258740-bdc93fc5-05be-4831-888d-a5c32eb823fb.gif" alt="" hidden />
+              </figure>
+              <figure class="img" style="background-image: url('https://user-images.githubusercontent.com/63289318/172258719-5ee3176c-f447-4ac3-946b-00aee979e0a3.gif')">
+                <img src="https://user-images.githubusercontent.com/63289318/172258719-5ee3176c-f447-4ac3-946b-00aee979e0a3.gif" alt="" hidden />
+              </figure>
+              <figure class="img" style="background-image: url('https://user-images.githubusercontent.com/63289318/172258727-86f76f73-e4d2-400a-9f07-58e7f47db586.gif')">
+                <img src="https://user-images.githubusercontent.com/63289318/172258727-86f76f73-e4d2-400a-9f07-58e7f47db586.gif" alt="" hidden />
+              </figure>
+              <figure class="img" style="background-image: url('https://user-images.githubusercontent.com/63289318/172258733-1b63207f-4937-4eb2-9a5d-81f1cdb3e226.gif')">
+                <img src="https://user-images.githubusercontent.com/63289318/172258733-1b63207f-4937-4eb2-9a5d-81f1cdb3e226.gif" alt="" hidden />
+              </figure>
+              <figure class="img" style="background-image: url('https://user-images.githubusercontent.com/63289318/172258726-092bbe88-3969-49cf-a118-9d8456122b2c.gif')">
+                <img src="https://user-images.githubusercontent.com/63289318/172258726-092bbe88-3969-49cf-a118-9d8456122b2c.gif" alt="" hidden />
+              </figure>
+              <figure class="img" style="background-image: url('https://user-images.githubusercontent.com/63289318/172258747-53ea1155-2708-49cd-8f73-37a1f5e0817b.gif')">
+                <img src="https://user-images.githubusercontent.com/63289318/172258747-53ea1155-2708-49cd-8f73-37a1f5e0817b.gif" alt="" hidden />
+              </figure>
+              <figure class="img" style="background-image: url('https://user-images.githubusercontent.com/63289318/172258753-f614fbd3-5035-4773-9609-8de3a66ea105.gif')">
+                <img src="https://user-images.githubusercontent.com/63289318/172258753-f614fbd3-5035-4773-9609-8de3a66ea105.gif" alt="" hidden />
+              </figure>
+            </div>
+          </div>
+          <div class="img-dot-btn-container">
+          </div>
+          <div class="img-btn-container">
+            <button type="button" data-direction="1">이전 이미지</button>
+            <button type="button" data-direction="-1">다음 이미지</button>
+          </div>
+          <div style="flex: 1;"></div>
+          <div class="link-wrapper">
+            <!-- GitHub -->
+            <a target="_blank" href="https://github.com/1-blue/blegram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="60"
+                height="60"
+                viewBox="0 0 30 30"
+              >
+                <path
+                  fill="#000"
+                  d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526
+                  c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098
+                  c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594
+                  c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z" />
+              </svg>
+            </a>
+            <!-- Velog -->
+            <a target="_blank" href="https://velog.io/@1-blue/series/bluegram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="56"
+                height="56"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  fill="#66FFCC"
+                  d="M0,24v448h448V24H0z M423.8,170.5c-1.8,38.9-28.9,92.2-81.6,159.9c-54.4,70.7-100.4,106.1-138,106.1
+                  c-23.3,0-43-21.5-59.2-64.6C113.6,256.6,100.2,189,74.2,189c-3,0-13.5,6.3-31.4,18.8L24,183.6c46.1-40.4,90.1-85.4,117.7-87.9
+                  c31.2-3,50.3,18.3,57.5,63.8c25.6,162.1,37,186.5,83.6,113.1c16.7-26.4,25.7-46.5,27-60.4c4.3-41-32-38.2-56.5-27.7
+                  c19.6-64.4,57.2-95.6,112.7-93.8C406.8,91.8,426.1,118.5,423.8,170.5z"/>
+                <path
+                  fill="#FFF"
+                  d="M365.9,90.7c-55.4-1.8-93,29.5-112.7,93.8c24.6-10.5,60.8-13.3,56.5,27.7c-1.2,13.8-10.3,33.9-27,60.4
+                  c-46.6,73.4-57.9,48.9-83.6-113.1c-7.2-45.5-26.3-66.9-57.5-63.8c-27.6,2.5-71.6,47.5-117.7,87.9l18.7,24.3
+                  C60.7,195.3,71.1,189,74.2,189c26,0,39.4,67.6,70.8,182.9c16.2,43,35.9,64.6,59.2,64.6c37.7,0,83.7-35.4,138-106.1
+                  c52.7-67.7,79.8-121,81.6-159.9C426.1,118.5,406.8,91.8,365.9,90.7z"/>
+              </svg>
+            </a>
+            <!-- Trello -->
+            <a target="_blank" href="https://trello.com/b/jBz14zzw/bluegram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+                width="60"
+                height="60"
+              >
+                <path
+                  fill="#1E88E5"
+                  d="M6,10c0-2.2,1.8-4,4-4h28c2.2,0,4,1.8,4,4v28c0,2.2-1.8,4-4,4H10c-2.2,0-4-1.8-4-4V10z"/>
+                <path
+                  fill="#FFF"
+                  d="M10,12.2c0-1.2,1-2.2,2.2-2.2h7.6c1.2,0,2.2,1,2.2,2.2v21.6c0,1.2-1,2.2-2.2,2.2h-7.6C11,36,10,35,10,33.8V12.2z M26,22.8c0,1.2,1,2.2,2.2,2.2h7.6c1.2,0,2.2-1,2.2-2.2V12.2c0-1.2-1-2.2-2.2-2.2h-7.6C27,10,26,11,26,12.2V22.8z"/>
+              </svg>
+            </a>
+            <!-- Logo -->
+            <a target="_blank" href="https://blegram.com">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="55"
+                height="55"
+                viewBox="0 0 40 40"
+                style="enable-background:new 0 0 40 40;"
+              >
+                <path
+                  fill="#FFF"
+                  d="M3,1h34c1.1,0,2,0.9,2,2v34c0,1.1-0.9,2-2,2H3c-1.1,0-2-0.9-2-2V3C1,1.9,1.9,1,3,1z"/>
+                <g>
+                  <path
+                    fill="none"
+                    d="M10.5,31l5.1-23.7c-5.4,1.9-9.2,7.3-9.2,13.5C6.4,24.6,7.9,28.4,10.5,31z"/>
+                  <path
+                    fill="none"
+                    d="M24.4,7.3L29.5,31c2.6-2.6,4.1-6.4,4.1-10.2C33.6,14.5,29.8,9.2,24.4,7.3z"/>
+                  <path
+                    fill="#6069F1"
+                    d="M3,20.9C3,28,7,34,12.7,37L20,3C10.6,3,3,11,3,20.9z M15.6,7.3L10.5,31c-2.6-2.6-4.1-6.4-4.1-10.2
+                    C6.4,14.6,10.2,9.2,15.6,7.3z"/>
+                  <path
+                    fill="#6069F1"
+                    d="M20,3l7.3,34C33,34,37,28,37,20.9C37,11,29.4,3,20,3z M29.5,31L24.4,7.3c5.4,1.9,9.2,7.2,9.2,13.5
+                    C33.6,24.6,32.1,28.4,29.5,31z"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div> 
+      </div>
+    </li>
+  </ul>
+
+  <!-- 이미지 클릭 시 확대해서 보여주는 모달 -->
+  <aside class="img-modal">
+    <div class="img-dot-btn-container">
+    </div>
+    <div class="img-btn-container">
+      <button type="button" class="btn-left" data-direction="1">《</button>
+      <button type="button" class="btn-right" data-direction="-1">》</button>
+    </div>
+  </aside>
+</body>
+</html>
