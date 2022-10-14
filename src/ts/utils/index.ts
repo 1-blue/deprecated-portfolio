@@ -297,3 +297,79 @@ export const scrollProgressBarSetting = () => {
 
   $scrollProgressBar.style.width = `${(scrollY / scrollHeight) * 100}%`;
 };
+
+/**
+ * 참고 사이트 ( https://gurtn.tistory.com/164 )
+ * 백그라운드 세팅 ( "<svg>"에 랜덤으로 "<circle>"을 그려넣음 )
+ * @returns
+ */
+export const backgroundSetting = () => {
+  const $background = document.querySelector("#background");
+  const $sky = document.querySelector("#sky");
+
+  if (!($background instanceof HTMLElement)) return;
+  if (!($sky instanceof SVGElement)) return;
+
+  // 브라우저의 가로/세로 중 가장 큰 크기
+  const maxSize = Math.max(window.innerWidth, window.innerHeight) * 1.5;
+  // 랜덤한 X/Y 위치 값
+  const getRandomX = () => Math.random() * maxSize + "";
+  const getRandomY = () => Math.random() * maxSize + "";
+  // 랜덤한 크기 ( "<circle>"는 반지름이 크기)
+  const randomRadius = () => Math.random() * 0.7 + 0.6 + "";
+  // 생성할 별 개수
+  const starCount = Math.floor(maxSize / 2);
+
+  // "background"와 "sky"크기 재정의
+  // 만약 2000px/1200px의 사이즈에서 실행한다면 2000px/2000px의 랜덤한 위치에 별이 찍힘
+  // 하지만 rotate를 해주기 때문에 돌리다 보면 빈공간이 생기게 됨
+  // ( 정사각형을 45% 돌리면 모서리와 모서리가 연결되는 부분은 튀어나오고, 그 외의 부분은 부족하게 됨 )
+  // 따라서 본래 크기보다 1.5배 더 크게 만들어서 돌려도 빈공간이 생기지 않도록 작성한 것
+  $background.style.width = `${maxSize}px`;
+  $background.style.height = `${maxSize}px`;
+  $sky.style.width = `${maxSize}px`;
+  $sky.style.height = `${maxSize}px`;
+
+  // 랜덤한 위치에 랜덤한 크기로 랜덤한 개수의 별 생성 ( 사실 매우 작은 원 )
+  const svgCircleList = new Array(starCount).fill(null).map(() => {
+    const $$circle = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "circle"
+    );
+
+    $$circle.classList.add("star");
+    // 랜덤 X/Y 위치 / 반지름
+    $$circle.setAttributeNS(null, "cx", getRandomX());
+    $$circle.setAttributeNS(null, "cy", getRandomY());
+    $$circle.setAttributeNS(null, "r", randomRadius());
+
+    return $$circle;
+  });
+
+  $sky.innerHTML = "";
+  $sky.append(...svgCircleList);
+};
+
+/**
+ * card의 높이 결정하기
+ */
+export const cardHeightSetting = () => {
+  const $filps = document.querySelectorAll(".filp");
+  $filps.forEach(($filp) => {
+    if (!($filp instanceof HTMLElement)) return;
+
+    const $front = $filp.querySelector(".front");
+    const $back = $filp.querySelector(".back");
+    if (!($front instanceof HTMLElement)) return;
+    if (!($back instanceof HTMLElement)) return;
+
+    $front.setAttribute("style", "");
+    $back.setAttribute("style", "");
+
+    const maxHeight = Math.max($front.clientHeight, $back.clientHeight);
+
+    $filp.style.height = `${maxHeight}px`;
+    $front.style.height = `${maxHeight}px`;
+    $back.style.height = `${maxHeight}px`;
+  });
+};
