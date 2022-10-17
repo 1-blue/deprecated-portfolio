@@ -169,7 +169,7 @@ import {
             });
           }
         },
-        { threshold: 0.4 }
+        { threshold: 0.2 }
       );
       observer.observe(scenes[1]);
       // "<details>" 전부 열기 버튼 클릭 이벤트 등록
